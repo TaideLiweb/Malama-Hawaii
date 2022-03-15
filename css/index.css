@@ -1,0 +1,28 @@
+.gray_bg {
+  background-color: #f7f8f9;
+}
+
+.mainTitle {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.mainTitle h1 {
+  margin: 0 0 10px 0;
+  font-size: 50px;
+}
+
+.mainTitle p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mainBanner {
+  margin-bottom: 40px;
+}
+
+.mainBanner img {
+  display: block;
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */
