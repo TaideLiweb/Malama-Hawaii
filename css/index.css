@@ -2,6 +2,10 @@
   background-color: #f7f8f9;
 }
 
+.section-mt {
+  margin-bottom: 50px;
+}
+
 .link {
   color: #F65936;
   font-weight: 700;
@@ -14,7 +18,7 @@
   content: '';
   width: 18px;
   height: 18px;
-  margin-left: 5px;
+  margin-left: 10px;
   padding: 3px;
   display: inline-block;
   vertical-align: top;
@@ -38,7 +42,7 @@
 }
 
 .mainTitle {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding: 0 20px;
 }
 
@@ -75,5 +79,108 @@
   margin: 20px 0;
   font-size: 12px;
   line-height: 1.8;
+}
+
+.quotation {
+  margin: 40px 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.quotation span {
+  color: #F65936;
+}
+
+.threeColumnCard {
+  padding-bottom: 60px;
+}
+
+.threeColumnCard .threeColumnCard__title {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.threeColumnCard .threeColumnCard__area {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.threeColumnCard .card {
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.threeColumnCard .card h3 {
+  margin: 0 0 20px 0;
+}
+
+.threeColumnCard .card a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.threeColumnCard .card p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.threeColumnCard .card span {
+  font-size: 1px;
+  color: #cacaca;
+}
+
+.threeColumnCard .card:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+.threeColumnCard .card:hover a {
+  color: #000;
+  background-color: #fff;
+}
+
+.threeColumnCard .threeColumnCard__area > div:nth-child(1) > .card {
+  background-image: url("../images/asset92.jpeg");
+}
+
+.threeColumnCard .threeColumnCard__area > div:nth-child(2) > .card {
+  background-image: url("../images/asset93.jpeg");
+}
+
+.threeColumnCard .threeColumnCard__area > div:nth-child(3) > .card {
+  background-image: url("../images/asset94.jpeg");
 }
 /*# sourceMappingURL=index.css.map */
