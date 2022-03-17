@@ -1,5 +1,5 @@
 @import "global/global";
-.mainTitle{
+.mainBanner__title{
     margin-bottom: 30px;
     padding: 0 20px;
     h1{
@@ -11,7 +11,7 @@
         font-size: 20px;
     }
 }
-.mainBanner{
+.mainBanner__img{
     margin-bottom:40px ;
     img{
         display: block;
@@ -21,7 +21,11 @@
 .scrollTip{
 
 }
-.index_card{
+.indexIntro{
+    margin-bottom: 50px;
+    background-color: #f7f8f9;
+}
+.indexIntro__card{
     img{
         display: block;
         border-radius: 10px;
@@ -34,15 +38,6 @@
         margin: 20px 0;
         font-size: 12px;
         line-height: 1.8;
-    }
-}
-.quotation{
-    margin: 40px 0;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1;
-    span{
-        color:#F65936 ;
     }
 }
 
@@ -108,5 +103,61 @@
     }
     .threeColumnCard__area>div:nth-child(3)>.card{
         background-image: url('../images/asset94.jpeg');
+    }
+}
+.latestNews__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3{
+        font-size: 18px;
+        color: #222;
+        span{
+            margin-top: 10px;
+            display: block;
+            color: #6c6D6e;
+            font-size: 10px;
+        }
+    }
+}
+.latestNews__cardArea{
+    .card{
+        margin: 10px 0;
+        .card__category{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            span{
+                margin-left: 5px;
+                margin-bottom: -3px;
+                font-size: 10px;
+            }
+        }
+        .card__img{
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+        .card__info{
+            .card__title{
+                margin: 0 0 10px 0;
+                color:#222 ;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .card__discription{
+                p{
+                    display: none;
+                    margin:0 0 10px 0 ;
+                    font-size: 14px;
+                }
+                span{
+                    color:#222 ;
+                    font-size: 12px;
+                } 
+            }
+        }
     }
 }
