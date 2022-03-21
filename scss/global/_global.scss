@@ -24,6 +24,14 @@
         display: block;
         background-color: #000;
     }
+    &.divideLine--white{
+        h2{
+            color: #fff;
+        }
+        &:before{
+            background-color: #fff;
+        }
+    }
 }
 .link{
    color: #F65936;
@@ -52,5 +60,11 @@
    }
    &:hover{
        color:#ffaa96 ;
+   }
+   &.link--bigWhite:after{
+       content: '';
+       width: 32px;
+       height: 32px;
+       border: 1px solid #fff;
    }
 }
