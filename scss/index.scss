@@ -22,7 +22,6 @@
 
 }
 .indexIntro{
-    margin-bottom: 50px;
     background-color: #f7f8f9;
 }
 .indexIntro__card{
@@ -106,16 +105,16 @@
     }
 }
 
-.latestNews{
+.latestNews,.movies{
     margin-bottom: 50px;
 }
 
-.latestNews__title,.communitiesPartners__title{
+.latestNews__title,.communitiesPartners__title,.movies__title{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     border-top: 0.5px solid #6c6D6e;
-    padding-top: 15px;
+    padding: 15px 0 30px 0;
     h3{
         margin: 0;
         font-size: 18px;
@@ -128,7 +127,7 @@
         }
     }
 }
-.latestNews__cardArea{
+.latestNews__cardArea,.movies__cardArea{
     .card{
         margin: 10px 0;
         .card__category{
@@ -143,10 +142,25 @@
         }
         .card__img{
             margin-bottom: 20px;
+            position: relative;
             img{
                 width: 100%;
                 border-radius: 8px;
                 display: block;
+            }
+            &.playIcon::after{
+                content: '';
+                position: absolute;
+                right: 15px;
+                bottom: 20px;
+                padding: 17px;
+                border: 1px solid #f65936;
+                border-radius: 50%;
+                background-position-x:60% ;
+                background-position-y:center ;
+                background-repeat: no-repeat;
+                background-size: 10px;
+                background-image: url(../images/asset96.svg);
             }
         }
         .card__info{
@@ -170,8 +184,8 @@
         }
     }
 }
+
 .featured{
-    padding-top: 20px;
     margin-bottom: 130px;
     background-image: url('/images/asset48.jpeg');
     background-position: center;
@@ -225,14 +239,14 @@
     }
 }
 .communitiesPartners{
-    padding-top: 10px;
     background-color: #f7f8f9;
+    padding-bottom: 50px;
     .communitiesPartners__cardArea{
-        margin-top: 40px;
+        margin-bottom: 15px;
         display: flex;
         overflow: hidden;
         .card{
-            width: 40%;
+            width: 35%;
             flex: 0 0 auto;
             padding:10px 20px;
             margin-right: 20px;
@@ -249,5 +263,28 @@
                 color: #707070;
             }
         }
+    }
+}
+.communitiesPartners__title{
+    padding-bottom: 40px;
+}
+.video{
+    img{
+        display: block;
+    }
+}
+.otherWebSite{
+    padding: 40px 0;
+    background-color: #303133;
+    .otherWebSite_areaLink{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .otherWebSite_link{
+        width: calc(50% - 5px) ;
+    }
+    img{
+        display: block;
     }
 }

@@ -11,7 +11,7 @@
     }
 }
 .divideLine{
-    margin: 40px 0 50px;
+    padding: 50px 0;
     h2{
         margin: 0;
         font-size: 20px;
@@ -67,4 +67,111 @@
        height: 32px;
        border: 1px solid #fff;
    }
+}
+.header{
+    background-color: #000;
+}
+.footer{
+    padding: 30px 0;
+    background-color: #202124;
+    color:rgba(255, 255, 255, 0.7) ;
+    position: relative;
+
+    .footer_top::after{
+        content: '';
+        width: calc(100% - 24px) ;
+        height: 1px;
+        position: absolute;
+        background-color:rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7) ;
+    }
+    .footer_pageLink{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 30px;
+        transition: all .3s;
+        span:nth-child(1){
+            font-weight: bold;
+            font-size: 17px;
+            margin-right: 10px;
+        }
+        span:nth-child(2){
+            font-size: 12px;
+        }
+        &:hover{
+            color: #F65936;
+        }
+    }
+    .footer_pageSmallLink{
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        transition: all .3s;
+        div{
+            line-height: 20px;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .footer_bottom{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        a{
+            transition: all .3s;
+        }
+        a:hover{
+            opacity: 0.7;
+        }
+    }
+    .footer_smallParagraph{
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .footer_logo{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .footer_icons{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        a{
+            margin-right: 20px;
+        }
+        a:last-child{
+            margin-right: 0;
+        }
+    }
+    .footer_copyright{
+        text-align: center;
+        font-size: 10px;
+        font-weight:lighter;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+.moblieMenu{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    a{  
+        height: 60px;
+        padding: 10px 0;
+        flex: 1;
+        div{
+            font-size: 12px;
+            color: #202124;
+        }
+        &.active{
+            background-color: #e9e9e9;
+        }
+    }
 }
