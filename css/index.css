@@ -1082,7 +1082,7 @@
 
 .featured {
   margin-bottom: 130px;
-  background-image: url("/images/asset48.jpeg");
+  background-image: url("images/asset48.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
