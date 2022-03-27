@@ -1,47 +1,176 @@
 @import "global/global";
 .mainBanner__title{
+    margin: 50px 0 30px;
     margin-bottom: 30px;
     padding: 0 20px;
+    @include media-breakpoint-up('sm'){
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    @include media-breakpoint-up('lg'){
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 0 0;
+        margin-top: 0;
+        margin-bottom: -60px;
+    }
     h1{
         margin: 0 0 10px 0;
         font-size: 50px;
+        // @include media-breakpoint-up('md'){
+        //     width: 57%;
+        //     justify-self: center;
+        //     font-size: 100px;
+        //     margin: 0;
+        // }
+        @include media-breakpoint-up('lg'){
+            width: 50%;
+            justify-self: center;
+            font-size: 150px;
+            margin: 0;
+        }
     }
     p{
         margin: 0;
-        font-size: 20px;
+        font-size: 16px;
+        @include media-breakpoint-up('lg'){
+            margin:0 80px 0 0;
+            font-size: 30px;
+            font-weight: bold;
+        }
     }
 }
-.mainBanner__img{
+.mainBanner__area{
     margin-bottom:40px ;
+    position: relative;
+    @include media-breakpoint-up('lg'){
+        display: flex;
+        position:unset;
+        margin-bottom: 0;
+    }
     img{
         display: block;
         width: 100%;
+        @include media-breakpoint-up('lg'){
+            border-top-right-radius:1em 1em;
+            width: 70%;
+        }
+    }
+    .mainParagraph{
+        padding:30px 12px 140px ;
+        @include media-breakpoint-up('xl'){
+            margin-left: 50px;
+            padding: 100px 0 0 0;
+        }
+        p{
+            font-size: 14px;
+            line-height: 2;
+            margin: 0;
+            @include media-breakpoint-up('lg'){
+                font-size: 1em;
+                height: max-content;
+                // max-height: 400px;
+                writing-mode: vertical-rl;
+            }
+            .pattern1{
+                display: none;
+                @include media-breakpoint-up('lg'){
+                    display: inline;
+                }
+            }
+            .pattern2{
+                @include media-breakpoint-up('lg'){
+                    display: none;
+                }
+            }
+        }
     }
 }
 .scrollTip{
-
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translate(0,-50%);
+    
+    @include media-breakpoint-up('lg'){
+        position: relative;
+        top: unset;
+        right: unset;
+        transform: unset;
+    }
+    img{
+        width: 80px;
+        margin: 0;
+        @include media-breakpoint-up('lg'){
+            width: 100px;
+            margin: 0 auto 100px auto;
+        }
+    }
+    .scrollTip_arrow{
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 .indexIntro{
     background-color: #f7f8f9;
+    .card{
+        display: flex;
+        justify-content: center;
+        .card__img{
+            flex: 0 0 auto;
+            width: 100%;
+            margin-top: -140px;
+            @include media-breakpoint-up('lg'){
+                flex: 0 0 auto;
+                width: 44%;
+            }
+            img{
+                display: block;
+                border-radius: 10px;
+            }
+        }
+        .card__info{
+            flex: 0 0 auto;
+            width: 100%;
+            @include media-breakpoint-up('lg'){
+                flex: 0 0 auto;
+                width: 45%;
+                padding: 0 0 0 60px;
+            }
+        }
+        .card__title{
+            margin-top: 30px;
+            font-size: 18px;
+            @include media-breakpoint-up('lg'){
+                margin-top: 100px;
+                margin-bottom: 40px;
+                font-size: 32px;
+                white-space:pre;
+            }
+        }
+        .card__paragraph{
+            margin: 20px 0;
+            font-size: 12px;
+            line-height: 1.8;
+            @include media-breakpoint-up('lg'){
+                font-size: 16px;
+            }
+        }
+    }
 }
-.indexIntro__card{
-    img{
-        display: block;
-        border-radius: 10px;
-    }
-    h2{
-        margin-top: 30px;
-        font-size: 18px;
-    }
-    p{
-        margin: 20px 0;
-        font-size: 12px;
-        line-height: 1.8;
-    }
-}
-
 .threeColumnCard{
     padding-bottom: 60px;
+    @include media-breakpoint-up('lg'){
+        padding-bottom: 100px;
+    }
     .threeColumnCard__title{
         font-size: 10px;
         text-align: center;
@@ -50,6 +179,13 @@
     .threeColumnCard__area{
         flex-wrap: nowrap;
         overflow: hidden;
+        &>div{
+            flex: 0 0 auto;
+            width: 75%;
+            @include media-breakpoint-up('lg'){
+                width: 33.3%;
+            }
+        }
     }
     .card{
         height: 400px;
@@ -63,6 +199,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         transition: all .3s;
+        @include media-breakpoint-up('lg'){
+            height: 550px;
+            padding: 30px;
+        }
         h3{
             margin: 0 0 20px 0;
         }
@@ -76,10 +216,12 @@
             color: #fff;
         }
         p{
+            opacity: 0;
             margin: 0 0 10px 0;
             font-size: 14px;
             line-height: 1.8;
             color: #fff;
+            transition: all .3s;
         }
         span{
             font-size: 1px;
@@ -91,6 +233,9 @@
             a{
                 color: #000;
                 background-color: #fff;
+            }
+            p{
+                opacity: 1;
             }
         }
     }
@@ -105,52 +250,89 @@
     }
 }
 
-.eventBlock__5Pieces,.latestNews,.movies{
+.eventBlock__5Pieces{
     margin-bottom: 50px;
+    @include media-breakpoint-up('lg'){
+        padding: 30px 0;
+        font-size: 26px;
+        &:nth-child(odd) .eventBlock__5Pieces__cardArea .card_column:first-child{
+            order: 1;
+        }
+    }
 }
 
-.eventBlock__5Pieces__title,.latestNews__title,.communitiesPartners__title,.movies__title{
+.eventBlock__5Pieces__title,.communitiesPartners__title{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 0.5px solid #6c6D6e;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     padding: 15px 0 30px 0;
+    @include media-breakpoint-up('lg'){
+        padding: 30px 0;
+        font-size: 26px;
+    }
     h3{
         margin: 0;
         font-size: 18px;
         color: #222;
+        @include media-breakpoint-up('lg'){
+            display: flex;
+            font-size: 26px;
+        }
         span{
             margin-top: 10px;
             display: block;
             color: #6c6D6e;
             font-size: 10px;
+            @include media-breakpoint-up('lg'){
+                margin: 0 0 0 10px;
+                align-self: end;
+            }
         }
     }
 }
-.eventBlock__5Pieces__cardArea,.latestNews__cardArea,.movies__cardArea{
-    @include media-breakpoint-up('sm'){
+.eventBlock__5Pieces__cardArea{
+    @include media-breakpoint-up('lg'){
+        max-height: 800px;
         flex-direction: column;
-        max-height: 700px;
     }
+    // @include media-breakpoint-up('xl'){
+    //     max-height: 800px;
+    // }
     .card{
         margin: 10px 0;
         .card__category{
+            min-height: 20px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
             span{
+                position: relative;
                 margin-left: 5px;
                 margin-bottom: -3px;
                 font-size: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            &:empty{
+                min-height: 20px
             }
         }
         .card__img{
             margin-bottom: 20px;
+            border-radius: 8px;
             position: relative;
+            @include media-breakpoint-up('sm'){
+                overflow: hidden;
+            }
             img{
                 width: 100%;
-                border-radius: 8px;
                 display: block;
+                @include media-breakpoint-up('sm'){
+                    object-fit: cover;
+                    object-position: center;
+                    height: 200px;
+                }
             }
             &.playIcon::after{
                 content: '';
@@ -168,6 +350,7 @@
             }
         }
         .card__info{
+            min-height: 90px;
             .card__title{
                 margin: 0 0 10px 0;
                 color:#222 ;
@@ -187,17 +370,46 @@
             }
         }
     }
-
+    .textOverflow:after{
+        content: '';
+        width: 40px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    }
     .card_column:first-child{
         flex: 0 0 auto;
         width: 100%;
-        @include media-breakpoint-up('sm'){
+        
+        @include media-breakpoint-up('lg'){
             flex: 0 0 auto;
             width: 50%;
         }
+        .card__img{
+            
+            @include media-breakpoint-up('lg'){
+                height: 400px;
+            }
+            img{
+                object-fit: cover;
+                height: 100%;
+            }
+        }
         .card__info{
-            @include media-breakpoint-up('sm'){
+            @include media-breakpoint-up('lg'){
                 display: flex;
+            }
+            .card__title{
+                @include media-breakpoint-up('lg'){
+                    font-size: 26px;
+                    margin:0 20px 0 0;
+                }
+            }
+            & *{
+                flex: 1;
             }
         }
         .card__discription{
@@ -209,7 +421,7 @@
     .card_column:nth-child(1)~.card_column{
         flex: 0 0 auto;
         width: 50%;
-        @include media-breakpoint-up('sm'){
+        @include media-breakpoint-up('lg'){
             flex: 0 0 auto;
             width: 25%;
         }
@@ -222,6 +434,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    .divideLine{
+        padding-top: 50px;
+    }
     .featured__area{
         margin-top: 50px;
         color: #fff;
@@ -246,6 +461,14 @@
             flex: 0 0 auto;
             width: 90%;
             margin-right: 15px;
+            @include media-breakpoint-up('md'){
+                width: 55%;
+                margin-right: 30px;
+            }
+            @include media-breakpoint-up('lg'){
+                width: 33.3%;
+                margin-right: 30px;
+            }
             img{
                 width: 100%;
                 height: 100%;
@@ -272,10 +495,19 @@
 .communitiesPartners{
     background-color: #f7f8f9;
     padding-bottom: 50px;
+    @include media-breakpoint-up('lg'){
+        padding-bottom: 120px;
+    }
     .communitiesPartners__cardArea{
         margin-bottom: 15px;
         display: flex;
         overflow: hidden;
+        @include media-breakpoint-up('lg'){
+            margin-bottom: 25px;
+        }
+        &:last-child{
+            display: none;
+        }
         .card{
             width: 35%;
             flex: 0 0 auto;
@@ -283,6 +515,14 @@
             margin-right: 20px;
             border-radius: 8px;
             background-color: #fff;
+            @include media-breakpoint-up('md'){
+                width: 20%;
+                margin-right: 25px;
+            }
+            @include media-breakpoint-up('lg'){
+                width: 14%;
+                margin-right: 30px;
+            }
             img{
                 width: 100%;
                 display: block;
@@ -307,18 +547,21 @@
 .otherWebSite{
     padding: 40px 0;
     background-color: #303133;
+    @include media-breakpoint-up('lg'){
+        padding: 80px 0;
+    }
     .otherWebSite_areaLink{
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        @include media-breakpoint-up('sm'){
+        @include media-breakpoint-up('lg'){
             flex-wrap: nowrap;
             gap: 30px;
         }
     }
     .otherWebSite_link{
         width: calc(50% - 5px) ;
-        @include media-breakpoint-up('sm'){
+        @include media-breakpoint-up('lg'){
             width: calc(25% - 15px) ;
         }
     }
